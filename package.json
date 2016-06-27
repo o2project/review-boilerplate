@@ -1,0 +1,20 @@
+{
+  "name": "review-boilerplate",
+  "version": "0.1.0",
+  "description": "Re:VIEW boilerplate",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:kubosho/review-boilerplate.git"
+  },
+  "keywords": [
+    "book",
+    "lovelive"
+  ],
+  "author": "kubosho",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
