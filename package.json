@@ -2,7 +2,11 @@
   "name": "review-boilerplate",
   "version": "0.1.0",
   "description": "Re:VIEW boilerplate",
-  "scripts": {},
+  "scripts": {
+    "clean": "gulp clean",
+    "pdf": "gulp pdf",
+    "web": "gulp web"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:kubosho/review-boilerplate.git"
@@ -15,6 +19,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "del": "^2.2.1",
     "gulp": "^3.9.1"
   }
 }
