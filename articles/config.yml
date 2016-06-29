@@ -97,13 +97,13 @@ debug: null
 stylesheet: ["style.css"]
 
 # ePUBのバージョン (2か3)
-# epubversion: 2
+epubversion: 3
 #
 # HTMLのバージョン (4か5。epubversionを3にしたときには5にする)
-# htmlversion: 4
+htmlversion: 5
 
 # 目次として抽出する見出しレベル
-toclevel: 3
+toclevel: 2
 
 # 採番の設定。採番させたくない見出しには「==[nonum]」のようにnonum指定をする
 #
@@ -273,11 +273,10 @@ epubmaker:
 
 # LaTeX用のスタイルファイル(styディレクトリ以下に置くこと)
 texstyle: techbooster-doujin
-texdocumentclass: ["jsbook", "b5j,twoside,openany"]
-#
+
 # LaTeX用のdocumentclassを指定する
-# texdocumentclass: ["jsbook", "uplatex,oneside"]
-#
+texdocumentclass: ["jsbook", "b5j,uplatex,twoside,openany"]
+
 # LaTeX用のコマンドを指定する
 # texcommand: "uplatex"
 #
