@@ -3,4 +3,5 @@ vendor/
 .bundle/
 articles/webroot/
 
+articles/*.pdf
 npm-debug.log
