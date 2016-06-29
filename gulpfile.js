@@ -1,9 +1,14 @@
 const exec = require('child_process').exec
+const execSync = require('child_process').execSync
 const gulp = require('gulp')
+const gulpExec = require('gulp-exec')
 const del = require('del')
 
 const targetDir = 'articles'
 const webrootDir = 'webroot'
+
+const redpenBin = 'redpen-distribution-*/bin/redpen'
+const redpenTargetFile = '*.re'
 
 const reviewConfig = 'config.yml'
 const reviewPrefix = 'bundle exec'
@@ -30,6 +35,13 @@ gulp.task('pdf', done => {
     }
     done()
   })
+})
+
+gulp.task('redpen', done => {
+  execSync(`${redpenBin} -v`)
+  gulp.src(`${targetDir}/${redpenTargetFile}`)
+    .pipe(gulpExec(`${redpenBin} <%= file.path %>`))
+    .pipe(gulpExec.reporter({ err: true, stderr: true, stdout: true }))
 })
 
 gulp.task('clean', done => {
