@@ -6,7 +6,7 @@ Node.jsとRuby + Bundlerのインストールが必要です。
 ## 準備
 
 ```shell
-bundle install --path vendor/bundler
+bundle install --path vendor/bundle
 npm install
 ```
 
