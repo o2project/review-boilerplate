@@ -4,6 +4,7 @@
   "description": "Re:VIEW boilerplate",
   "scripts": {
     "test": "gulp redpen",
+    "deploy": "gulp publish",
     "clean": "gulp clean",
     "pdf": "gulp pdf",
     "web": "gulp web"

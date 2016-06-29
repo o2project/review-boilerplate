@@ -3,6 +3,7 @@ vendor/
 .bundle/
 articles/webroot/
 redpen-distribution-*/
+temp/
 
 articles/*.pdf
 npm-debug.log
