@@ -23,7 +23,6 @@
   "private": true,
   "devDependencies": {
     "del": "^2.2.1",
-    "gulp": "^3.9.1",
-    "gulp-exec": "^2.1.2"
+    "gulp": "^3.9.1"
   }
 }

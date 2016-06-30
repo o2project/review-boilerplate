@@ -1,7 +1,6 @@
 const exec = require('child_process').exec
 const execSync = require('child_process').execSync
 const gulp = require('gulp')
-const gulpExec = require('gulp-exec')
 const del = require('del')
 
 const repositoryName = 'kubosho/review-boilerplate'
@@ -16,6 +15,7 @@ const webrootDir = 'book'
 
 const redpenBin = 'redpen-distribution-*/bin/redpen'
 const redpenTargetFile = '*.re'
+const redpenConfigFile = 'redpen-config.xml'
 
 const reviewConfig = 'config.yml'
 const reviewPrefix = 'bundle exec'
@@ -53,10 +53,19 @@ gulp.task('pdf', done => {
 })
 
 gulp.task('redpen', done => {
-  execSync(`${redpenBin} -v`)
-  gulp.src(`${targetDir}/${redpenTargetFile}`)
-    .pipe(gulpExec(`${redpenBin} <%= file.path %>`))
-    .pipe(gulpExec.reporter({ err: true, stderr: true, stdout: true }))
+  exec(`${redpenBin} -c ${redpenConfigFile} ${targetDir}/${redpenTargetFile}`, (error, stdout, stderr) => {
+    // RedPen outputs log in stderr
+    const stdOutput = stdout.replace(/\r?\n/g, '')
+    if (error == null && stderr == null && stdOutput === '') {
+      done()
+    }
+
+    // RedPen outputs error message in stdout
+    if (stderr != null && stdOutput !== '') {
+      console.error(stdout)
+      setImmediate(() => process.exit(1))
+    }
+  })
 })
 
 gulp.task('deploy', () => {
