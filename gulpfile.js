@@ -12,7 +12,7 @@ const publishBranch = 'gh-pages'
 
 const targetDir = 'articles'
 const tempDir = 'temp'
-const webrootDir = 'webroot'
+const webrootDir = 'book'
 
 const redpenBin = 'redpen-distribution-*/bin/redpen'
 const redpenTargetFile = '*.re'

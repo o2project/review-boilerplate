@@ -93,6 +93,10 @@ debug: null
 # HTMLファイルの拡張子(省略した場合はhtml)
 # htmlext: html
 #
+
+# Webページ用のディレクトリ指定（既定はwebroot）
+docroot: "book"
+
 # CSSファイル(配列で複数指定可)
 stylesheet: ["style.css"]
 
