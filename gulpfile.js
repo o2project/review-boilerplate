@@ -60,6 +60,7 @@ gulp.task('redpen', done => {
 })
 
 gulp.task('deploy', () => {
+  execSync(`mkdir ${tempDir} || rm -rf ${tempDir}`)
   execSync(`git clone --quiet ${repository} ${tempDir} 2> /dev/null`)
 
   process.chdir(tempDir)
