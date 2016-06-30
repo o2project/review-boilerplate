@@ -68,8 +68,16 @@ gulp.task('deploy', () => {
   execSync(`git fetch origin`)
   execSync(`git reset --hard origin/${publishBranch}`)
 
+  process.chdir('..')
+
+  execSync(`npm run web`)
+  execSync(`cp ${targetDir}/${webrootDir}/*.* ${tempDir}`)
   const sha = execSync('git rev-parse --verify HEAD').toString().substring(0, 7)
+
+  process.chdir(tempDir)
+
+  const remote = execSync('git remote').toString().replace(/\r?\n/g, '')
   execSync(`git add -A`)
   execSync(`git commit -m '[ci skip] Update with ${sha}'`)
-  execSync(`git push --quiet ${repository} ${publishBranch}`)
+  execSync(`git push -u --quiet ${remote} ${publishBranch}`)
 })
