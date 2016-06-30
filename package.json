@@ -4,6 +4,8 @@
   "description": "Re:VIEW boilerplate",
   "scripts": {
     "test": "gulp redpen",
+    "setup": "bundle install --path vendor/bundle && npm install && ./bin/setup-redpen.sh 1.6.2",
+    "deploy": "gulp deploy",
     "clean": "gulp clean",
     "pdf": "gulp pdf",
     "web": "gulp web"
