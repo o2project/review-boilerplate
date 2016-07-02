@@ -16,6 +16,12 @@ npm run web
 open articles/book/index.html
 ```
 
+## RedPenでテストする
+
+```shell
+npm test
+```
+
 ## PDFを出力する
 
 TeXのインストールが必要です。
