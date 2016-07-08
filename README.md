@@ -9,17 +9,20 @@ Node.jsとRuby + Bundlerのインストールが必要です。
 npm run setup
 ```
 
-## ブラウザ上でプレビューする
-
-```shell
-npm run web
-open articles/book/index.html
-```
+gulpfile.js内にあるrepositoryNameの値も、変更する必要があります。o
+https://github.com/kubosho/review-boilerplate/blob/aabcec6/gulpfile.js#L6
 
 ## RedPenでテストする
 
 ```shell
 npm test
+```
+
+## ブラウザ上でプレビューする
+
+```shell
+npm run web
+open articles/book/index.html
 ```
 
 ## PDFを出力する
