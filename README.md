@@ -3,6 +3,11 @@
 Re:VIEWビルド + RedPenでのテスト + Travis CIによる継続的インテグレーション環境を構築できるリポジトリです。
 Node.jsとRuby + Bundlerのインストールが必要です。
 
+## 依存しているもの
+
+RedPenのダウンロードで[jq](https://stedolan.github.io/jq/)に依存しています。
+[Download jq](https://stedolan.github.io/jq/download/)を読んで、ダウンロードをお願いします。
+
 ## 準備
 
 ```shell
