@@ -1,6 +1,6 @@
 {
   "name": "review-boilerplate",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Re:VIEW boilerplate",
   "scripts": {
     "test": "gulp redpen && reachable-urls articles/*.re",
