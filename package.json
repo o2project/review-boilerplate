@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Re:VIEW boilerplate",
   "scripts": {
-    "test": "gulp redpen",
+    "test": "gulp redpen && reachable-urls articles/*.re",
     "setup": "bundle install --path vendor/bundle && npm install && ./bin/setup-redpen.sh",
     "deploy": "gulp deploy",
     "clean": "gulp clean",
@@ -23,6 +23,7 @@
   "private": true,
   "devDependencies": {
     "del": "^2.2.1",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "reachable-urls": "^0.7.0"
   }
 }
