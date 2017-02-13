@@ -17,7 +17,7 @@ npm run setup
 gulpfile.js内にあるrepositoryNameの値も、変更する必要があります。<br>
 https://github.com/kubosho/review-boilerplate/blob/aabcec6/gulpfile.js#L6
 
-## RedPenでテストする
+## 原稿のテストをする
 
 ```shell
 npm test
